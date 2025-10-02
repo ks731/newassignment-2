@@ -60,7 +60,7 @@ function removeR() {
     if(numRows == 0){
         numCols = 0;
     }
-    console.log("removed row. Total: ${numRows} rows, ${numCols} cols");
+    console.log("Removed row. Total: ${numRows} rows, ${numCols} cols");
 
 }
 
