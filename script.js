@@ -112,6 +112,12 @@ function fillU(){
 
 // Fill all cells
 function fillAll(){
+    const grid = document.getElementById("grid");
+    const cells = grid.getElementsByTagName("td");
+
+    for(let cell of cells){
+        cell.style.backgroundColor = colorSelected;
+    }
 }
 
 // Clear all cells
