@@ -22,11 +22,30 @@ function addR() {
         };
     }
     numRows++;
+    console.log("Total: ${numRows} rows, ${numCols] col");
 }
 
 // Add a column
 function addC() {
-    alert("Clicked Add Col"); // Replace this line with your code.
+    const grid = document.getElementById("grid");
+    const rows = grid.rows;
+    //if zero rows
+    if(rows.length == 0){
+        addR();
+        return;
+    }
+
+    //add cell to each row
+    for(let i = 0; i < rows.length; i++){
+        const newCell = rows[i].insertCell();
+        newCell.onclick = function(){
+            this.style.backgroundColor = colorSelected;
+        };
+    }
+    numCols++;
+    console.log("Total: ${numRows} rows, ${numCols] col");
+
+
 }
 
 // Remove a row
