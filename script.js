@@ -22,7 +22,7 @@ function addR() {
         };
     }
     numRows++;
-    console.log("Total: ${numRows} rows, ${numCols] col");
+    console.log("Row Added. Total: ${numRows} rows, ${numCols] col");
 }
 
 // Add a column
@@ -43,14 +43,25 @@ function addC() {
         };
     }
     numCols++;
-    console.log("Total: ${numRows} rows, ${numCols] col");
+    console.log("Col Added. Total: ${numRows} rows, ${numCols} cols");
 
 
 }
 
 // Remove a row
 function removeR() {
-    alert("Clicked Remove Row"); // Replace this line with your code.
+    const grid = document.getElementById("grid");
+
+    if(numRows > 0){
+        grid.deleteRow(-1);
+        numRows--;
+    }
+    //if row was last row
+    if(numRows == 0){
+        numCols = 0;
+    }
+    console.log("Removed row. Total: ${numRows} rows, ${numCols} cols");
+
 }
 
 // Remove a column
