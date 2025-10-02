@@ -97,7 +97,7 @@ function fillU(){
     const grid = document.getElementById("grid");
     const cells = grid.getElementsByTagName("td");
 
-    for(let cells of cells){
+    for(let cell of cells){
         if(cell.style.backgroundColor == "" ||
             cell.style.backgroundColor == "white" ||
             cell.style.backgroundColor == "#ffffff" ||
